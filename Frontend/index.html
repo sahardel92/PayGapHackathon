@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayGap Quest – Test Calculateur Salarial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💼 Test du calculateur salarial</h1>
+    <p class="subtitle">Compare ton salaire à la moyenne du secteur selon ton niveau</p>
+
+    <form id="salaryForm">
+      <!-- Secteur -->
+      <div class="form-group">
+        <label for="secteur">Secteur :</label>
+        <select id="secteur" required>
+          <option value="IT">Informatique</option>
+          <option value="Santé">Santé</option>
+          <option value="Education">Éducation</option>
+          <option value="AutresSecteurs">Autres Secteurs</option>
+        </select>
+      </div>
+
+      <!-- Métier -->
+      <div class="form-group">
+        <label for="metier">Métier :</label>
+        <select id="metier" required>
+          <option value="Developpeur Full-Stack">Développeur Full-Stack</option>
+          <option value="Developpeur JavaScript">Développeur JavaScript</option>
+          <option value="UX/UI Designer">UX/UI Designer</option>
+          <option value="Data Analyst">Data Analyst</option>
+          <option value="Unity Game Developer">Unity Game Developer</option>
+          <option value="Infirmier Hospitalier">Infirmier Hospitalier</option>
+          <option value="Aide-Soignante">Aide-Soignante</option>
+          <option value="Professeur Primaire">Professeur Primaire</option>
+          <option value="Educateur Specialise">Éducateur Spécialisé</option>
+        </select>
+      </div>
+
+      <!-- Niveau -->
+      <div class="form-group">
+        <label for="niveau">Niveau :</label>
+        <select id="niveau" required>
+          <option value="Junior">Junior</option>
+          <option value="Medior" selected>Medior</option>
+          <option value="Senior">Senior</option>
+        </select>
+      </div>
+
+      <!-- Salaire -->
+      <div class="form-group">
+        <label for="salaire">Ton salaire (€) :</label>
+        <input type="number" id="salaire" placeholder="Ex : 3200" required />
+      </div>
+
+      <button type="submit">Calculer</button>
+    </form>
+
+    <!-- Résultat -->
+    <div id="result" class="result-card hidden"></div>
+  </div>
+
+  <footer>
+    <p>Projet <strong>PayGap Quest ⚖️</strong> — Démo locale</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
