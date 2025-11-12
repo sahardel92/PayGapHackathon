@@ -5,11 +5,7 @@ header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header('Content-Type: application/json');
 
-<<<<<<< HEAD
 // Gérer la requête préliminaire OPTIONS (prévol CORS)
-=======
-//  Gérer la requête préliminaire OPTIONS (prévol CORS)
->>>>>>> ee7610b92bb303d03346ca89f6456d512dad40bc
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit;

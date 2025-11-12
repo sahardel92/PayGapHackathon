@@ -45,11 +45,7 @@ class SalaryCalculator {
         if ($ecartPersonnel < -100) {
             $message = " Ton salaire est en dessous de la moyenne du secteur.";
         } elseif ($ecartPersonnel > 100) {
-<<<<<<< HEAD
             $message = " Ton salaire est au-dessus de la moyenne du secteur.";
-=======
-            $message = "Ton salaire est au-dessus de la moyenne du secteur.";
->>>>>>> ee7610b92bb303d03346ca89f6456d512dad40bc
         } else {
             $message = " Ton salaire est proche de la moyenne.";
         }
