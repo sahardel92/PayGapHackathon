@@ -7,17 +7,17 @@ document.getElementById("salaryForm").addEventListener("submit", async (e) => {
   const salaire = document.getElementById("salaire").value.trim();
   const resultDiv = document.getElementById("result");
 
-  // 🔹 Vérification des champs
+  // Vérification des champs
   if (!secteur || !metier || !niveau || !salaire) {
     resultDiv.innerHTML = `<p style="color:red;"> Merci de remplir tous les champs.</p>`;
     return;
   }
 
   try {
-    // 🔹 URL de ton backend local
+    // URL de ton backend local
     const url = `http://localhost/testHackthon-main/Backend/calculate.php?secteur=${encodeURIComponent(secteur)}&metier=${encodeURIComponent(metier)}&niveau=${encodeURIComponent(niveau)}&salaire=${encodeURIComponent(salaire)}`;
 
-    // 🔹 Appel au backend
+    // Appel au backend
     const res = await fetch(url);
     const data = await res.json();
 
@@ -26,7 +26,7 @@ document.getElementById("salaryForm").addEventListener("submit", async (e) => {
       return;
     }
 
-    // 🔹 Affichage des résultats salariaux
+    // Affichage des résultats salariaux
         resultDiv.innerHTML = `
         <div class="result-card">
         <h3> Résultats pour ${data.metier} (${data.niveau})</h3>

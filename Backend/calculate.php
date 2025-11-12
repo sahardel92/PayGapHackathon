@@ -1,5 +1,5 @@
 <?php
-// ✅ Autoriser les requêtes depuis un autre port (CORS)
+// Autoriser les requêtes depuis un autre port (CORS)
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
