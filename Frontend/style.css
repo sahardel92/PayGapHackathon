@@ -1,0 +1,108 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f6fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ---- CONTENEUR PRINCIPAL ---- */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ---- TITRES ---- */
+h1 {
+  text-align: center;
+  color: #6c63ff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ---- FORMULAIRE ---- */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+select:focus,
+input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 3px rgba(108, 99, 255, 0.3);
+}
+
+/* ---- BOUTON ---- */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #574bff;
+  transform: scale(1.02);
+}
+
+/* ---- ZONE DE RÉSULTAT ---- */
+#result {
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+#result div {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#result h3 {
+  margin-bottom: 10px;
+  color: #6c63ff;
+}
+
+#result p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #888;
+  font-size: 14px;
+}
