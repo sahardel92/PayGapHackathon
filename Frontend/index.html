@@ -8,60 +8,102 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1> PayGap </h1>
-    <p class="subtitle">Compare ton salaire à la moyenne de ton secteur selon ton niveau</p>
 
-    <!-- Formulaire principal -->
+  <div class="container">
+
+    <h1>PayGap</h1>
+    <p class="subtitle">Compare ton salaire à la moyenne de ton secteur</p>
+
+    
+    <!-- FORMULAIRE PRINCIPAL-->
+    
     <form id="salaryForm">
-      
-      <!-- Secteur -->
+
+      <!-- SECTEUR -->
       <div class="form-group">
         <label for="secteur">Secteur :</label>
         <select id="secteur" required>
-          <option value="">-- Choisis un secteur --</option>
-          <!-- Les secteurs seront ajoutés automatiquement via script.js -->
+          <option value="">-- Choisir un secteur --</option>
+
+          <option value="IT">IT</option>
+          <option value="Santé">Santé</option>
+          <option value="Education">Éducation</option>
+          <option value="AutresSecteurs">Autres Secteurs</option>
         </select>
       </div>
 
-      <!-- Métier -->
+      <!-- MÉTIER -->
       <div class="form-group">
         <label for="metier">Métier :</label>
         <select id="metier" required>
-          <option value="">-- Choisis d’abord un secteur --</option>
-          <!-- Les métiers seront ajoutés automatiquement via script.js -->
+          <option value="">-- Choisir un métier --</option>
+
+          <!-- MÉTIERS IT -->
+          <option value="Developpeur Full-Stack" data-secteur="IT">Développeur Full-Stack</option>
+          <option value="Developpeur JavaScript" data-secteur="IT">Développeur JavaScript</option>
+          <option value="UX/UI Designer" data-secteur="IT">UX/UI Designer</option>
+          <option value="Unity Game Developer" data-secteur="IT">Unity Game Developer</option>
+          <option value="Data Analyst" data-secteur="IT">Data Analyst</option>
+          <option value="Pentester Cybersecurity" data-secteur="IT">Pentester Cybersecurity</option>
+          <option value="Technicien Réseaux" data-secteur="IT">Technicien Réseaux</option>
+
+          <!-- MÉTIERS SANTÉ -->
+          <option value="Infirmier Hospitalier" data-secteur="Santé">Infirmier Hospitalier</option>
+          <option value="Aide-Soignante" data-secteur="Santé">Aide-Soignante</option>
+          <option value="Kinesitherapeute" data-secteur="Santé">Kinésithérapeute</option>
+          <option value="Secretaire Medicale" data-secteur="Santé">Secrétaire Médicale</option>
+          <option value="Technologue Laboratoire" data-secteur="Santé">Technologue Laboratoire</option>
+
+          <!-- MÉTIERS EDUCATION -->
+          <option value="Professeur Primaire" data-secteur="Education">Professeur Primaire</option>
+          <option value="Professeur Secondaire" data-secteur="Education">Professeur Secondaire</option>
+          <option value="Educateur Specialise" data-secteur="Education">Éducateur Spécialisé</option>
+          <option value="Surveillant Scolaire" data-secteur="Education">Surveillant Scolaire</option>
+          <option value="Assistant Pedagogique" data-secteur="Education">Assistant Pédagogique</option>
+          <option value="Directeur Ecole" data-secteur="Education">Directeur d'École</option>
+
+          <!-- MÉTIERS AUTRES SECTEURS -->
+          <option value="Analyste Financier" data-secteur="AutresSecteurs">Analyste Financier</option>
+          <option value="Conseiller en Assurance" data-secteur="AutresSecteurs">Conseiller en Assurance</option>
+          <option value="Architecte d’Intérieur" data-secteur="AutresSecteurs">Architecte d’Intérieur</option>
+          <option value="Chercheur Scientifique" data-secteur="AutresSecteurs">Chercheur Scientifique</option>
+          <option value="Chef de Projet Communication" data-secteur="AutresSecteurs">Chef de Projet Communication</option>
+          <option value="Assistante Administrative" data-secteur="AutresSecteurs">Assistante Administrative</option>
+          <option value="Technicien en Construction" data-secteur="AutresSecteurs">Technicien en Construction</option>
+          <option value="Artiste de Scène" data-secteur="AutresSecteurs">Artiste de Scène</option>
         </select>
       </div>
 
-      <!-- Niveau -->
-      <div class="form-group">
-        <label for="niveau">Niveau :</label>
-        <select id="niveau" required>
-          <option value="Junior">Junior</option>
-          <option value="Medior" selected>Medior</option>
-          <option value="Senior">Senior</option>
-        </select>
-      </div>
-
-      <!-- Salaire -->
+      <!-- SALAIRE -->
       <div class="form-group">
         <label for="salaire">Ton salaire (€) :</label>
         <input type="number" id="salaire" placeholder="Ex : 3200" required />
       </div>
 
-      <!-- Bouton -->
       <button type="submit" class="btn-submit">Calculer</button>
     </form>
 
-    <!-- Résultat du calcul -->
-    <div id="result" class="result-card"></div>
+    <div id="resultDetails" class="result-details"></div>
+    <!--2 BOX RÉSULTAT HOMME/FEMME -->
+    <div id="resultBoxes" class="result-boxes" style="display:none;">
+      <div class="box">
+        <p>Salaire moyen homme</p>
+        <h2 id="boxHomme"></h2>
+      </div>
+
+      <div class="box">
+        <p>Salaire moyen femme</p>
+        <h2 id="boxFemme"></h2>
+      </div>
+    </div>
+
+   
+    <!--BLOC DÉTAILLÉ-->
+  
+    
   </div>
 
-  <footer>
-    <p>Projet <strong>PayGap Quest</strong> — Simulation locale</p>
-  </footer>
-
   <script src="script.js"></script>
+
 </body>
 </html>
-
