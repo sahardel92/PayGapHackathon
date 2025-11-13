@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const resultDetails = document.getElementById("resultDetails");
 
             resultDetails.innerHTML = `
-                <h2>${data.metier} (${niveau})</h2>
+              
 
                 <p><strong>Moyenne du secteur :</strong> ${moyenneSecteur} €</p>
-                <p style="margin-top:10px;">${message}</p>
+                <p style="margin-top:8px;">${message}</p>
             `;
 
             resultDetails.style.display = "block";
