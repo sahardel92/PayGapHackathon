@@ -1,12 +1,38 @@
+
 body {
+    /* Dégradé linéaire en diagonale à 155° :
+       - Commence blanc en haut à gauche
+       - Passe par des tons pêche et orangés
+       - Termine sur un rouge rosé
+       Utilisation des HSL pour un rendu plus doux et équilibré. */
+    background-image: linear-gradient(
+      155deg,
+      hsl(0deg 0% 100%) 0%,      /* blanc pur */
+      hsl(27deg 93% 88%) 6%,     /* beige clair / pêche */
+      hsl(27deg 93% 76%) 19%,    /* pêche moyen */
+      hsl(20deg 88% 68%) 36%,    /* orange doux */
+      hsl(7deg 76% 63%) 58%,     /* corail chaud */
+      hsl(354deg 66% 59%) 100%   /* rose foncé / rouge doux */
+    );
+  
+    /* Fixation du fond pour un effet de profondeur au scroll */
+    background-attachment: fixed;
+  
+    /* Garantit que le fond couvre toute la page */
+    height: 100vh;
+  
+    /* Retire les marges par défaut du navigateur */
+    margin: 0;
+
+ }
+
+ main {
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;    
-    height: 100vh;   
-    background-color: rgb(236, 188, 115);
-    /*! TAKE OFF background */
-}
+   
+  }
 
 
 form>div>div>div {
