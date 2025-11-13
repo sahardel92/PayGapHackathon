@@ -4,26 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PayGap – Calculateur Salarial</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style-form-sara.css" />
+  <link rel="stylesheet" href="./global.css" />
 </head>
 
 <body>
 
   <div class="container">
 
-    <h1>PayGap</h1>
-    <p class="subtitle">Compare ton salaire à la moyenne de ton secteur</p>
-
+    <h2> Test du calculateur salarial </h2> <!--! h2, textSara-->
+    <h4 class="subtitle">Compare ton salaire à la moyenne de ton secteur selon ton niveau</h4> <!--! h4 Sara-->
     
     <!-- FORMULAIRE PRINCIPAL-->
     
     <form id="salaryForm">
-
+      <div> <!--! inputs Sara-->
+        <div class="secteur-metier"> <!--! Secteur+metier Sara-->
       <!-- SECTEUR -->
       <div class="form-group">
         <label for="secteur">Secteur :</label>
         <select id="secteur" required>
-          <option value="">-- Choisir un secteur --</option>
+          <option value="">Choisis un secteur</option> <!--! plus court Sara-->
 
           <option value="IT">IT</option>
           <option value="Santé">Santé</option>
@@ -31,12 +32,13 @@
           <option value="AutresSecteurs">Autres Secteurs</option>
         </select>
       </div>
+    
 
       <!-- MÉTIER -->
       <div class="form-group">
         <label for="metier">Métier :</label>
         <select id="metier" required>
-          <option value="">-- Choisir un métier --</option>
+          <option value="">Choisis un métier</option> <!--! plus court Sara-->
 
           <!-- MÉTIERS IT -->
           <option value="Developpeur Full-Stack" data-secteur="IT">Développeur Full-Stack</option>
@@ -73,12 +75,14 @@
           <option value="Artiste de Scène" data-secteur="AutresSecteurs">Artiste de Scène</option>
         </select>
       </div>
+    </div> <!--! Close Secteur+metier Sara-->
 
+    <div class="niveau-salaire"> <!--! Niveau+salaire Sara-->
             <!-- NIVEAU -->
       <div class="form-group">
         <label for="niveau">Niveau :</label>
         <select id="niveau" required>
-          <option value="">-- Choisir un niveau --</option>
+          <option value="">Choisir un niveau</option>
           <option value="Junior">Junior</option>
           <option value="Medior">Medior</option>
           <option value="Senior">Senior</option>
@@ -90,13 +94,17 @@
         <label for="salaire">Ton salaire (€) :</label>
         <input type="number" id="salaire" placeholder="Ex : 3200" required />
       </div>
+    </div> <!--! Close Niveau+salaire Sara-->
+  </div> <!--! Close inputs Sara-->
 
       <button type="submit" class="btn-submit">Calculer</button>
     </form>
 
-    <div id="resultDetails" class="result-details"></div>
+
+   
     <!--2 BOX RÉSULTAT HOMME/FEMME -->
     <div id="resultBoxes" class="result-boxes" style="display:none;">
+
       <div class="box">
         <p>Salaire moyen homme</p>
         <h2 id="boxHomme"></h2>
@@ -107,6 +115,9 @@
         <h2 id="boxFemme"></h2>
       </div>
     </div>
+
+    <!--! RESULTAT GENERAL-->
+    <div id="resultDetails" class="result-details"></div>
 
    
   
