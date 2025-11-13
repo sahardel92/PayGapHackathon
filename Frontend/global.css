@@ -5,6 +5,11 @@
     font-family: "Funnel Display", sans-serif;
 }
 
+nav a {
+  color: black;           /* your desired default color */
+  text-decoration: none;  /* optional: removes underline */
+}
+
 :root {
     --orange: #FAAC6B; 
     --brown: #735053; 
@@ -58,9 +63,6 @@
     padding: 32px 12px;
   }
 
-  nav a {
-    text-decoration: none;
-  }
 
 
   .nav-right {
