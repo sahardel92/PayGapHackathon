@@ -1,0 +1,167 @@
+/* ** ----------- TEST 2 GRADIENT ------------------ */
+/* === Fond principal du site (V2) === */
+body {
+  /* Dégradé linéaire en diagonale à 155° :
+     - Commence blanc en haut à gauche
+     - Passe par des tons pêche et orangés
+     - Termine sur un rouge rosé
+     Utilisation des HSL pour un rendu plus doux et équilibré. */
+  background-image: linear-gradient(
+    155deg,
+    hsl(0deg 0% 100%) 0%,      /* blanc pur */
+    hsl(27deg 93% 88%) 6%,     /* beige clair / pêche */
+    hsl(27deg 93% 76%) 19%,    /* pêche moyen */
+    hsl(20deg 88% 68%) 36%,    /* orange doux */
+    hsl(7deg 76% 63%) 58%,     /* corail chaud */
+    hsl(354deg 66% 59%) 100%   /* rose foncé / rouge doux */
+  );
+
+  /* Fixation du fond pour un effet de profondeur au scroll */
+  background-attachment: fixed;
+
+  /* Garantit que le fond couvre toute la page */
+  min-height: 100vh;
+
+  /* Retire les marges par défaut du navigateur */
+  margin: 0;
+
+  /* Nécessaire pour le positionnement du ::before */
+  position: relative;
+}
+
+
+/* === Couche de texture et de lumière (overlay subtil) === */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* Trois calques pour la texture lumineuse */
+  background-image:
+    /* Halo blanc doux en haut à gauche */
+    radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.5) 0%, transparent 70%),
+
+    /* Halo plus léger en bas à droite */
+    radial-gradient(circle at 75% 80%, rgba(255, 255, 255, 0.25) 0%, transparent 6)
+
+}
+
+/* Animation subtiles background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+h2, h3, p { /* ! A retirer d'ici et mettre dans global  */
+  margin-bottom: 16px;
+}
+
+h2 { /* ! idem */
+  margin-top: 24px;
+}
+
+/* .containerCadreLegal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32%;
+
+} */
+
+/* .containerRapport {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16%;
+
+} */
+
+.containerRapport>a {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    /* effet glass v1 */
+    /* background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    padding: 48px 32px;
+    margin: 48px auto;
+    max-width: 1200px;
+    width: 90%; */
+
+    /* Glass effect v2*/
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  padding: 40px 40px 50px;
+  max-width: 900px;
+  /* margin: 0 auto; */
+}
+
+
+
+    .containerCards {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        margin-top: 32px;
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex: 1 1 280px;
+            /* largeur minimale */
+            max-width: 320px;
+            padding: 24px;
+            gap: 16px;
+
+            /* effet Ombre */
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            padding: 24px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+
+            &>a {
+                display: inline-block;
+                border: 1px solid black;
+                padding: 10px;
+                color: black;
+                width: fit-content;
+            }
+
+            &>img:first-child {
+                max-width: 100px;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+}

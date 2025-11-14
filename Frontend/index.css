@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display&display=swap');
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-family: 'Funnel Display', sans-serif;
+}
+
+h1 {
+    color: var(--dark-green);
+    padding-bottom: 4%;
+}
+
+section {
+  width: 100%;
+  position: relative;
+}
+
+/* SECTION 1 */
+.section1 {
+  height: 200vh;
+  /* enough for horizontal + vertical scroll */
+  /* background: #FAAC6B; ;  */
+}
+
+.container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 5vw;
+  box-sizing: border-box;
+  align-items: flex-end;
+  /* align all items to the bottom */
+}
+
+.side {
+  width: 60vw;
+  height: 50vh;
+  background: transparent;
+  border-radius: 20px;
+}
+
+.illustration {
+  width: 700vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+/* SECTION 2 */
+.section2 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  gap: 60px;
+  text-align: center;
+
+}
+
+/* Counter section styling */
+.counter-section {
+  margin-bottom: 40px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+}
+
+.counter-section h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+   color: var(--brown);
+}
+
+
+#pay-gap-counter {
+  font-size: 4rem;
+  font-weight: bold;
+   color: var(--brown);
+  margin-top: 10px;
+}
+
+/* Glass effect container */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  padding: 40px 40px 50px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Content sections inside glass */
+.content-block {
+   line-height: 1.6; 
+   gap: 1.2rem; 
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+}
+
+.content-block:last-child {
+  margin-bottom: 0;
+}
+
+.content-block h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+   color: var(--dark-green);
+}
+
+.content-block p {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: var(--dark-green);
+  margin-bottom: 1rem;
+  max-width: 800px; /* améliore la lisibilité sur grands écrans */
+
+}
+
+.content-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  /* text-align: left; */
+}
+
+.content-block li {
+  font-size: 1rem;
+  line-height: 2;
+  margin-bottom: 15px;
+  color: var(--dark-green);
+  font-family: 'Funnel Display', sans-serif;
+}
+
+.content-block h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 30px 0 20px;
+  color: #0C2317;
+  /* font-style: italic; */
+}
+
+.content-block h3 {
+  font-size: 2em;
+  margin: 20px 0;
+  color: var(--dark-green);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 0; /* évite l’espace excessif au-dessus du titre */
+}
+
+
+.containerCardMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2%;
+    margin-top: 2rem;
+
+}
+
+.cardMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   justify-content: space-evenly; /* distribue les éléments de manière égale */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 250px;
+  height: 250px;
+  padding: 0.5rem;
+  /* effet transparence */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  background-color: var(--brown);
+  opacity: 0.7;
+}
+
+.cardMenu img {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+
+}
+
+.cardMenu h4 {
+
+margin-bottom: 10px; /* Ajuste un petit espace uniquement en dessous du titre */
+}.cardMenu h4, .cardMenu img {
+  margin: 0; /* Supprime les marges par défaut */
+}
+
+
+.cardMenu:hover {
+  transform: translateY(-4px) scale(1.01); /* Soulève et agrandit légèrement */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3); /* Ombre plus marquée */
+  opacity: 0.9; /* Rend la carte un peu moins transparente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.cardMenu a {
+    color: white; /* Texte blanc*/
+}
+
+/* Button styling */
+button {
+  background: #DB5260;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-family: 'Funnel Display', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #C44654;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(219, 82, 96, 0.3);
+}
+
+

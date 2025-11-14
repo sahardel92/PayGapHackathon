@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Funnel Display", sans-serif;
+}
+
+:root {
+  --orange: #FAAC6B;
+  --brown: #735053;
+  --gray-light: #CCCCCC;
+  --dark-green: #0C2317;
+  --dark-orange: #DB5260;
+  --dark-violet: #AA70B9;
+  --light-violet: #BD9BC6;
+  --dark-gray: #8A879C;
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: 600;
+  /* semibold */
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  /* semibold */
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+  /* regular */
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  /* regular */
+}
+
+a {
+  font-size: 16px;
+  font-weight: 600;
+  /* semibold */
+}
+
+li {
+  font-size: 16px;
+  font-weight: 400;
+  /* semibold */
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  /* regular */
+}
+
+
+section {
+  padding: 50px;
+}
+
+/*NAV BAR*/
+.logo {
+  color: var(--dark-orange);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  gap: 72px;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  color: var(--dark-green);
+}
+
+nav svg {
+  height: 60px;
+  width: 60px;
+}
+
+button {
+  display: flex;
+  padding: 0.5rem 3.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 1.25rem;
+  color: white;
+  background-color: var(--dark-green);
+  
+}
+
+/* ** ----------- Bacgkground Gradient v1 ------------ */
+
+/* === Fond principal du site === */
+body {
+  /* Dégradé radial partant du coin supérieur gauche :
+     - du blanc pur (#ffffff) au centre
+     - vers un orange doux (#FAAC6B)
+     - puis vers un rouge rosé (#DB5260)
+     Ce gradient crée une belle profondeur lumineuse. */
+  background: radial-gradient(circle at top left, #ffffff 0%, #FAAC6B 35%, #DB5260 100%);
+
+  /* Fixe le fond pour qu’il ne bouge pas au scroll :
+     effet “parallaxe” subtil, très esthétique sur un fond coloré. */
+  background-attachment: fixed;
+
+  /* Fait en sorte que le fond occupe toute la hauteur de la fenêtre,
+     même s’il n’y a pas beaucoup de contenu. */
+  min-height: 100vh;
+
+  /* Supprime les marges par défaut du navigateur autour du body. */
+  margin: 0;
+
+
+  /* Nécessaire pour que le pseudo-élément ::before puisse se positionner
+     par rapport au body. */
+  position: relative;
+}
+
+
+/* === Couche de texture lumineuse en surimpression === */
+body::before {
+  /* Crée un pseudo-élément vide qui sert d’overlay. */
+  content: "";
+   z-index: -1;
+
+  /* Le positionne en absolu pour couvrir toute la surface du body. */
+  position: absolute;
+  inset: 0;
+  /* équivaut à top:0; right:0; bottom:0; left:0; */
+
+  /* Superposition de trois calques de textures : */
+  background-image:
+    /* 1️⃣ Premier halo lumineux : cercle blanc semi-transparent
+       placé vers le coin supérieur gauche. */
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5) 0%, transparent 70%),
+
+    /* 2️⃣ Deuxième halo plus léger : cercle blanc translucide
+       vers le coin inférieur droit. */
+    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.2) 0%, transparent 60%),
+
+    /* 3️⃣ Texture fine en diagonale : un léger motif répété
+       avec des bandes blanches transparentes pour un effet “grain”. */
+    repeating-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 2px,
+      transparent 2px,
+      transparent 4px);
+}
+
+/* Animation subtiles background */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background-size: 200% 200%;
+  animation: gradientShift 30s ease-in-out infinite;
+}
