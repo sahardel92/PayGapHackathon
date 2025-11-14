@@ -138,3 +138,9 @@ border: 1px solid var(--Light-Gray, #CCC);
     font-weight: 400;
 }
 
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+}
+
