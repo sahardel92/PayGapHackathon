@@ -1,0 +1,51 @@
+{
+  "IT": {
+    "ecartHF": 0.18,
+    "metiers": {
+      "Developpeur Full-Stack": { "CP": "200", "base": 3300, "femme": 3100, "homme": 3500 },
+      "Developpeur JavaScript": { "CP": "200", "base": 3100, "femme": 2950, "homme": 3250 },
+      "UX/UI Designer": { "CP": "200", "base": 2900, "femme": 2850, "homme": 3000 },
+      "Unity Game Developer": { "CP": "200", "base": 3000, "femme": 2800, "homme": 3200 },
+      "Data Analyst": { "CP": "200", "base": 3400, "femme": 3250, "homme": 3550 },
+      "Pentester Cybersecurity": { "CP": "200", "base": 3800, "femme": 3600, "homme": 4000 },
+      "Technicien Réseaux": { "CP": "200", "base": 2800, "femme": 2700, "homme": 2900 }
+    }
+  },
+
+  "Santé": {
+    "ecartHF": 0.17,
+    "metiers": {
+      "Infirmier Hospitalier": { "CP": "330", "base": 2800, "femme": 2700, "homme": 2900 },
+      "Aide-Soignante": { "CP": "330", "base": 2500, "femme": 2450, "homme": 2600 },
+      "Kinesitherapeute": { "CP": "330", "base": 3100, "femme": 3000, "homme": 3200 },
+      "Secretaire Medicale": { "CP": "330", "base": 2400, "femme": 2350, "homme": 2550 },
+      "Technologue Laboratoire": { "CP": "330", "base": 2950, "femme": 2850, "homme": 3050 }
+    }
+  },
+
+  "Education": {
+    "ecartHF": 0.08,
+    "metiers": {
+      "Professeur Primaire": { "CP": "360", "base": 3200, "femme": 3100, "homme": 3300 },
+      "Professeur Secondaire": { "CP": "360", "base": 3400, "femme": 3300, "homme": 3500 },
+      "Educateur Specialise": { "CP": "360", "base": 2800, "femme": 2700, "homme": 2900 },
+      "Surveillant Scolaire": { "CP": "360", "base": 2500, "femme": 2400, "homme": 2600 },
+      "Assistant Pedagogique": { "CP": "360", "base": 2600, "femme": 2500, "homme": 2700 },
+      "Directeur Ecole": { "CP": "360", "base": 4200, "femme": 4000, "homme": 4400 }
+    }
+  },
+
+  "AutresSecteurs": {
+    "ecartHF": 0.20,
+    "metiers": {
+      "Analyste Financier": { "CP": "400", "base": 3800, "femme": 3600, "homme": 4000 },
+      "Conseiller en Assurance": { "CP": "400", "base": 3200, "femme": 3050, "homme": 3350 },
+      "Architecte d’Intérieur": { "CP": "400", "base": 3500, "femme": 3400, "homme": 3600 },
+      "Chercheur Scientifique": { "CP": "400", "base": 4000, "femme": 3850, "homme": 4150 },
+      "Chef de Projet Communication": { "CP": "400", "base": 3300, "femme": 3200, "homme": 3400 },
+      "Assistante Administrative": { "CP": "400", "base": 2600, "femme": 2500, "homme": 2700 },
+      "Technicien en Construction": { "CP": "400", "base": 3100, "femme": 2950, "homme": 3250 },
+      "Artiste de Scène": { "CP": "400", "base": 2900, "femme": 2800, "homme": 3000 }
+    }
+  }
+}

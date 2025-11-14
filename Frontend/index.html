@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayGap – Calculateur Salarial</title>
+  <link rel="stylesheet" href="./style-form-sara.css" />
+  <link rel="stylesheet" href="./global.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M30.0024 29.9975V0C46.5696 0 60 13.4303 60 29.9975C60 35.2632 58.6139 40.4361 55.981 44.9963L30.0024 29.9975Z"
+          fill="#CA498C" stroke="white" />
+        <path
+          d="M30.0025 29.9975L55.9811 44.9963C47.6975 59.3438 29.3514 64.2597 15.0038 55.9761C10.4436 53.3433 6.65676 49.5564 4.02393 44.9963L30.0025 29.9975Z"
+          fill="#FDE3DF" stroke="white" />
+        <path
+          d="M30.0025 29.9975L4.02391 44.9963C-4.25967 30.6487 0.656176 12.3025 15.0038 4.0189C19.564 1.38607 24.7369 0 30.0025 0V29.9975Z"
+          fill="#E6BFCE" stroke="white" />
+      </svg>
+      <p class="logo">PayGap</p>
+    </div>
+
+    <div class="nav-right">
+      <a href="">Accueil</a>
+      <a href="#">Formulaire</a>
+      <a href="">Négociation</a>
+      <a href="">Ressources</a>
+    </div>
+
+  </nav>
+
+<main>
+
+  <div class="container">
+
+    <h2> Test du calculateur salarial </h2> <!--! h2, textSara-->
+    <h4 class="subtitle">Compare ton salaire à la moyenne de ton secteur selon ton niveau</h4> <!--! h4 Sara-->
+    
+    <!-- FORMULAIRE PRINCIPAL-->
+    
+    <form id="salaryForm">
+      <div> <!--! inputs Sara-->
+        <div class="secteur-metier"> <!--! Secteur+metier Sara-->
+      <!-- SECTEUR -->
+      <div class="form-group">
+        <label for="secteur">Secteur :</label>
+        <select id="secteur" required>
+          <option value="">Choisis un secteur</option> <!--! plus court Sara-->
+
+          <option value="IT">IT</option>
+          <option value="Santé">Santé</option>
+          <option value="Education">Éducation</option>
+          <option value="AutresSecteurs">Autres Secteurs</option>
+        </select>
+      </div>
+    
+
+      <!-- MÉTIER -->
+      <div class="form-group">
+        <label for="metier">Métier :</label>
+        <select id="metier" required>
+          <option value="">Choisis un métier</option> <!--! plus court Sara-->
+
+          <!-- MÉTIERS IT -->
+          <option value="Developpeur Full-Stack" data-secteur="IT">Développeur Full-Stack</option>
+          <option value="Developpeur JavaScript" data-secteur="IT">Développeur JavaScript</option>
+          <option value="UX/UI Designer" data-secteur="IT">UX/UI Designer</option>
+          <option value="Unity Game Developer" data-secteur="IT">Unity Game Developer</option>
+          <option value="Data Analyst" data-secteur="IT">Data Analyst</option>
+          <option value="Pentester Cybersecurity" data-secteur="IT">Pentester Cybersecurity</option>
+          <option value="Technicien Réseaux" data-secteur="IT">Technicien Réseaux</option>
+
+          <!-- MÉTIERS SANTÉ -->
+          <option value="Infirmier Hospitalier" data-secteur="Santé">Infirmier Hospitalier</option>
+          <option value="Aide-Soignante" data-secteur="Santé">Aide-Soignante</option>
+          <option value="Kinesitherapeute" data-secteur="Santé">Kinésithérapeute</option>
+          <option value="Secretaire Medicale" data-secteur="Santé">Secrétaire Médicale</option>
+          <option value="Technologue Laboratoire" data-secteur="Santé">Technologue Laboratoire</option>
+
+          <!-- MÉTIERS EDUCATION -->
+          <option value="Professeur Primaire" data-secteur="Education">Professeur Primaire</option>
+          <option value="Professeur Secondaire" data-secteur="Education">Professeur Secondaire</option>
+          <option value="Educateur Specialise" data-secteur="Education">Éducateur Spécialisé</option>
+          <option value="Surveillant Scolaire" data-secteur="Education">Surveillant Scolaire</option>
+          <option value="Assistant Pedagogique" data-secteur="Education">Assistant Pédagogique</option>
+          <option value="Directeur Ecole" data-secteur="Education">Directeur d'École</option>
+
+          <!-- MÉTIERS AUTRES SECTEURS -->
+          <option value="Analyste Financier" data-secteur="AutresSecteurs">Analyste Financier</option>
+          <option value="Conseiller en Assurance" data-secteur="AutresSecteurs">Conseiller en Assurance</option>
+          <option value="Architecte d’Intérieur" data-secteur="AutresSecteurs">Architecte d’Intérieur</option>
+          <option value="Chercheur Scientifique" data-secteur="AutresSecteurs">Chercheur Scientifique</option>
+          <option value="Chef de Projet Communication" data-secteur="AutresSecteurs">Chef de Projet Communication</option>
+          <option value="Assistante Administrative" data-secteur="AutresSecteurs">Assistante Administrative</option>
+          <option value="Technicien en Construction" data-secteur="AutresSecteurs">Technicien en Construction</option>
+          <option value="Artiste de Scène" data-secteur="AutresSecteurs">Artiste de Scène</option>
+        </select>
+      </div>
+    </div> <!--! Close Secteur+metier Sara-->
+
+    <div class="niveau-salaire"> <!--! Niveau+salaire Sara-->
+            <!-- NIVEAU -->
+      <div class="form-group">
+        <label for="niveau">Niveau :</label>
+        <select id="niveau" required>
+          <option value="">Choisir un niveau</option>
+          <option value="Junior">Junior</option>
+          <option value="Medior">Medior</option>
+          <option value="Senior">Senior</option>
+        </select>
+      </div>
+
+            <!-- SALAIRE -->
+      <div class="form-group">
+        <label for="salaire">Ton salaire brut(€) :</label>
+        <input type="number" id="salaire" placeholder="Ex : 3200" required />
+      </div>
+    </div> <!--! Close Niveau+salaire Sara-->
+  </div> <!--! Close inputs Sara-->
+
+      <button type="submit" class="btn-submit">Calculer</button>
+    </form>
+
+
+    <!--! RESULTAT GENERAL-->
+    <div id="resultDetails" class="result-details"></div>
+    
+    <!--2 BOX RÉSULTAT HOMME/FEMME -->
+    <div id="resultBoxes" class="result-boxes" style="display:none;">
+
+      <div class="box">
+        <p>Salaire moyen homme</p>
+        <h2 id="boxHomme"></h2>
+      </div>
+
+      <div class="box">
+        <p>Salaire moyen femme</p>
+        <h2 id="boxFemme"></h2>
+      </div>
+    </div>
+
+   
+
+   
+  
+    
+  </div>
+
+  <script src="script.js"></script>
+</main>
+</body>
+</html>
