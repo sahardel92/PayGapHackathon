@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-
         try {
             const url = `http://localhost/PayGapHackathon/Backend/calculate.php?secteur=${encodeURIComponent(secteur)}&metier=${encodeURIComponent(metier)}&salaire=${encodeURIComponent(salaire)}`;
             const res = await fetch(url);
