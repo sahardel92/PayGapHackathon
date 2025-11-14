@@ -4,7 +4,7 @@ const right = document.querySelector('.right');
 const illustration = document.querySelector('.illustration');
 
 const vh = window.innerHeight;
-const horizontalDistance = 37; // vw
+const horizontalDistance = 26; // vw
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
