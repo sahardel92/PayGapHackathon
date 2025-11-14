@@ -43,7 +43,7 @@ h4 {
 }
 
 a {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   text-decoration: none; /* enlever le souligné */
   color: var(--dark-green);

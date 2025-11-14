@@ -7,6 +7,7 @@ body {
   }
 
  main {
+    margin-top: 48px;
     flex: 1;           /*! It occupies all the available space*/    
     display: flex;        
     align-items: center;
