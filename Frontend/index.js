@@ -23,23 +23,29 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Compteur depuis le 20 oct à 9h = Unequal Pay Day
+// Compteur depuis le 20 oct à 00h = Unequal Pay Day
 
-
-const unequalPayDay = new Date('2025-10-20T00:00:00'); // date du début du travail gratuit
+const unequalPayDay = new Date('2025-10-20T00:00:00'); 
 const counterElement = document.getElementById('counter');
 
 function updateCounter() {
   const today = new Date();
-  let diff = today - unequalPayDay; // différence en ms
+  let diff = today - unequalPayDay; // Différence en millisecondes
+  
+  // On utilise Math.abs (valeur absolue) pour toujours avoir des chiffres positifs
+  const absoluteDiff = Math.abs(diff);
+  
+  const diffDays = Math.floor(absoluteDiff / (1000 * 60 * 60 * 24));
+  const diffHours = Math.floor((absoluteDiff / (1000 * 60 * 60)) % 24);
+  const diffMinutes = Math.floor((absoluteDiff / (1000 * 60)) % 60);
 
-  // Calcul du nombre de jours, heures et minutes
-  const diffDays = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const diffHours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const diffMinutes = Math.floor((diff / (1000 * 60)) % 60);
-
-  // Affiche message "Depuis ... les femmes travaillent gratuitement"
-  counterElement.innerHTML = `Depuis <strong>${diffDays} jours</strong>, <strong>${diffHours} heures</strong> et <strong>${diffMinutes} minutes</strong>, les femmes travaillent gratuitement.`;
+  if (diff < 0) {
+    // AVANT le 20 octobre : Message au futur (Compte à rebours)
+    counterElement.innerHTML = `Dans <strong>${diffDays} jours</strong>, <strong>${diffHours} heures</strong> et <strong>${diffMinutes} minutes</strong>, les femmes travailleront gratuitement.`;
+  } else {
+    // APRÈS le 20 octobre : Message original (Compteur de temps écoulé)
+    counterElement.innerHTML = `Depuis <strong>${diffDays} jours</strong>, <strong>${diffHours} heures</strong> et <strong>${diffMinutes} minutes</strong>, les femmes travaillent gratuitement.`;
+  }
 }
 
 // Mise à jour chaque minute
